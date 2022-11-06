@@ -1,0 +1,270 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "contract IEncryptVerifier",
+                "name": "encrypt_verifier_",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IDEcryptVerifier",
+                "name": "decrypt_verifier_",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [],
+        "name": "Setup",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "decrypt_verifier",
+        "outputs": [
+            {
+                "internalType": "contract IDEcryptVerifier",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "encrypt_verifier",
+        "outputs": [
+            {
+                "internalType": "contract IEncryptVerifier",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "game",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "cardIndex",
+                "type": "uint256"
+            }
+        ],
+        "name": "getRevealProof",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256[8]",
+                        "name": "proof",
+                        "type": "uint256[8]"
+                    },
+                    {
+                        "internalType": "uint256[4]",
+                        "name": "card",
+                        "type": "uint256[4]"
+                    }
+                ],
+                "internalType": "struct RevealProof",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getShuffleProof",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256[8]",
+                        "name": "proof",
+                        "type": "uint256[8]"
+                    },
+                    {
+                        "internalType": "uint256[104]",
+                        "name": "deck",
+                        "type": "uint256[104]"
+                    }
+                ],
+                "internalType": "struct ShuffleProof",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256[104]",
+                "name": "startingDeck",
+                "type": "uint256[104]"
+            }
+        ],
+        "name": "setup",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "pk_",
+                "type": "uint256"
+            }
+        ],
+        "name": "setupPK",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "cardStartIndex",
+                "type": "uint256"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint256[8]",
+                        "name": "proof",
+                        "type": "uint256[8]"
+                    },
+                    {
+                        "internalType": "uint256[4]",
+                        "name": "card",
+                        "type": "uint256[4]"
+                    }
+                ],
+                "internalType": "struct RevealProof",
+                "name": "proof",
+                "type": "tuple"
+            }
+        ],
+        "name": "verifyRevealAndSave",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256[8]",
+                        "name": "proof",
+                        "type": "uint256[8]"
+                    },
+                    {
+                        "internalType": "uint256[104]",
+                        "name": "deck",
+                        "type": "uint256[104]"
+                    }
+                ],
+                "internalType": "struct ShuffleProof",
+                "name": "proof",
+                "type": "tuple"
+            }
+        ],
+        "name": "verifyShuffleAndSave",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

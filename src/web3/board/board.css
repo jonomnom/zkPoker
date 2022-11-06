@@ -1,0 +1,22 @@
+.board {
+    width: 95vw;
+    height: 75vh;
+    top: -5vh;
+    position: relative;
+}
+
+.pot {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.community-cards {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42em; /* Picked those to cover the cards */
+    height: 22.5em;
+}

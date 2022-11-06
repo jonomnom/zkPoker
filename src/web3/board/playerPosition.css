@@ -1,0 +1,52 @@
+.player-position {
+    width: fit-content;
+    position: absolute;
+    transform-origin: 50% 50%;
+    width: 21em; /* Chosen by experimenting so that the position covers the 2-card hand and leave some vertical room for the stack size*/
+    height: 30em;
+}
+.player-position .hand {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+.player-status {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    font-size: 2.5em;
+}
+.player-status {
+    bottom: 0;
+}
+.player-status {
+    display: flex;
+    top: 0;
+}
+.player-info {
+    display: flex;
+    position: absolute;
+    left: -10em;
+    top: 7.5em;
+    font-size: 1.5em;
+}
+.player-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
+}
+.player-info li {
+    text-align: left;
+}
+.icon {
+    width: 1.4em;
+    height: 1.4em;
+    font-size: 1em;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: #282c34;
+    color: white;
+    position: relative;
+    left: -50%;
+}
